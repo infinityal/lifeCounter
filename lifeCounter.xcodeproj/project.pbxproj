@@ -14,6 +14,8 @@
 		321A5CE928123FE300285121 /* lifeCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321A5CE828123FE300285121 /* lifeCounterTests.swift */; };
 		321A5CF328123FE300285121 /* lifeCounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321A5CF228123FE300285121 /* lifeCounterUITests.swift */; };
 		321A5CF528123FE300285121 /* lifeCounterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321A5CF428123FE300285121 /* lifeCounterUITestsLaunchTests.swift */; };
+		321A5D032812413600285121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321A5D012812413600285121 /* LaunchScreen.storyboard */; };
+		321A5D062812413B00285121 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321A5D042812413B00285121 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		321A5CEE28123FE300285121 /* lifeCounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lifeCounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		321A5CF228123FE300285121 /* lifeCounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lifeCounterUITests.swift; sourceTree = "<group>"; };
 		321A5CF428123FE300285121 /* lifeCounterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lifeCounterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		321A5D022812413600285121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		321A5D052812413B00285121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 				321A5CD128123FE200285121 /* AppDelegate.swift */,
 				321A5CD328123FE200285121 /* SceneDelegate.swift */,
 				321A5CD528123FE200285121 /* ViewController.swift */,
+				321A5D012812413600285121 /* LaunchScreen.storyboard */,
+				321A5D042812413B00285121 /* Main.storyboard */,
 				321A5CDA28123FE300285121 /* Assets.xcassets */,
 				321A5CDF28123FE300285121 /* Info.plist */,
 			);
@@ -225,7 +231,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				321A5D062812413B00285121 /* Main.storyboard in Resources */,
 				321A5CDB28123FE300285121 /* Assets.xcassets in Resources */,
+				321A5D032812413600285121 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +295,25 @@
 			targetProxy = 321A5CEF28123FE300285121 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		321A5D012812413600285121 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				321A5D022812413600285121 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		321A5D042812413B00285121 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				321A5D052812413B00285121 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		321A5CF628123FE300285121 /* Debug */ = {
