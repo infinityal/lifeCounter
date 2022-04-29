@@ -22,9 +22,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JS3-DA-P3t" userLabel="p1">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JS3-DA-P3t" userLabel="p1">
                                 <rect key="frame" x="0.0" y="115" width="414" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVd-QA-Mnm">
                                         <rect key="frame" x="10" y="-15" width="46.5" height="24.5"/>
@@ -41,8 +40,8 @@
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" systemColor="opaqueSeparatorColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" fixedFrame="YES" distribution="fillProportionally" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="LxV-YN-geF">
-                                        <rect key="frame" x="10" y="4" width="294.5" height="58.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" fixedFrame="YES" distribution="fillProportionally" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="LxV-YN-geF">
+                                        <rect key="frame" x="10" y="4" width="399.5" height="58.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lh2-Et-Ixp">
                                                 <rect key="frame" x="0.0" y="0.0" width="35.5" height="58.5"/>
@@ -59,9 +58,12 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p1AddOne:" destination="BYZ-38-t0r" eventType="touchDown" id="yCs-3Z-Rkh"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Kw-5s-1lw">
-                                                <rect key="frame" x="81.5" y="0.0" width="32.5" height="58.5"/>
+                                                <rect key="frame" x="70.5" y="0.0" width="32.5" height="58.5"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
@@ -74,16 +76,56 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p1MinusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EoC-ky-Lwb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eni-0E-ugx">
+                                                <rect key="frame" x="138" y="0.0" width="35.5" height="58.5"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="+">
+                                                            <attributes>
+                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="30" name="PartyLetPlain"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p1PlusVal:" destination="BYZ-38-t0r" eventType="touchDown" id="Alg-oF-Q3C"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7b-zP-cd9">
-                                                <rect key="frame" x="160" y="0.0" width="41" height="58.5"/>
+                                                <rect key="frame" x="208.5" y="0.0" width="41" height="58.5"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiJ-or-dWm">
+                                                <rect key="frame" x="284.5" y="0.0" width="32.5" height="58.5"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="-">
+                                                            <attributes>
+                                                                <font key="NSFont" size="30" name="PartyLetPlain"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p1MinusVal:" destination="BYZ-38-t0r" eventType="touchDown" id="Vf7-Rp-ib8"/>
+                                                </connections>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XP6-BZ-lEt">
-                                                <rect key="frame" x="247" y="0.0" width="47.5" height="58.5"/>
+                                                <rect key="frame" x="352" y="0.0" width="47.5" height="58.5"/>
                                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="50"/>
                                                 <color key="textColor" systemColor="systemPinkColor"/>
                                                 <nil key="highlightedColor"/>
@@ -93,9 +135,8 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G8i-eG-bgd" userLabel="p2">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8i-eG-bgd" userLabel="p2">
                                 <rect key="frame" x="0.0" y="190" width="414" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kz-x6-R3j">
                                         <rect key="frame" x="10" y="-15" width="50" height="25"/>
@@ -112,8 +153,8 @@
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" systemColor="opaqueSeparatorColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" fixedFrame="YES" distribution="fillProportionally" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="wxG-oH-qQH">
-                                        <rect key="frame" x="10" y="4" width="207.5" height="58.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" fixedFrame="YES" distribution="fillProportionally" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="wxG-oH-qQH">
+                                        <rect key="frame" x="10" y="4" width="399.5" height="58.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdA-aP-0rg">
                                                 <rect key="frame" x="0.0" y="0.0" width="35.5" height="58.5"/>
@@ -130,9 +171,12 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p2AddOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GdB-SD-FAS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwp-zn-qdQ">
-                                                <rect key="frame" x="81.5" y="0.0" width="32.5" height="58.5"/>
+                                                <rect key="frame" x="70.5" y="0.0" width="32.5" height="58.5"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
@@ -145,9 +189,56 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p2MinusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K95-f4-Sqn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3M-nW-Qb3">
+                                                <rect key="frame" x="138" y="0.0" width="35.5" height="58.5"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="+">
+                                                            <attributes>
+                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="30" name="PartyLetPlain"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p2PlusVal:" destination="BYZ-38-t0r" eventType="touchDown" id="rV0-WY-EoP"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="glq-Sg-bhk">
+                                                <rect key="frame" x="208.5" y="0.0" width="41" height="58.5"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N94-9N-NDz">
+                                                <rect key="frame" x="284.5" y="0.0" width="32.5" height="58.5"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="-">
+                                                            <attributes>
+                                                                <font key="NSFont" size="30" name="PartyLetPlain"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p2MinusVal:" destination="BYZ-38-t0r" eventType="touchDown" id="Bma-HX-b2h"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YwE-V8-nqi">
-                                                <rect key="frame" x="160" y="0.0" width="47.5" height="58.5"/>
+                                                <rect key="frame" x="352" y="0.0" width="47.5" height="58.5"/>
                                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="50"/>
                                                 <color key="textColor" systemColor="systemPinkColor"/>
                                                 <nil key="highlightedColor"/>
@@ -157,9 +248,8 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c7h-ji-Nrz" userLabel="p3">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7h-ji-Nrz" userLabel="p3">
                                 <rect key="frame" x="0.0" y="265" width="414" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYV-YV-A2e">
                                         <rect key="frame" x="10" y="-15" width="50" height="25"/>
@@ -176,8 +266,8 @@
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" systemColor="opaqueSeparatorColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" fixedFrame="YES" distribution="fillProportionally" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="6ng-aY-ppa">
-                                        <rect key="frame" x="10" y="4" width="207.5" height="58.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" fixedFrame="YES" distribution="fillProportionally" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="6ng-aY-ppa">
+                                        <rect key="frame" x="10" y="4" width="399.5" height="58.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2w-1x-kc5">
                                                 <rect key="frame" x="0.0" y="0.0" width="35.5" height="58.5"/>
@@ -194,9 +284,12 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p3AddOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lCo-sB-Yt1"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bh8-GO-3O0">
-                                                <rect key="frame" x="81.5" y="0.0" width="32.5" height="58.5"/>
+                                                <rect key="frame" x="70.5" y="0.0" width="32.5" height="58.5"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
@@ -209,9 +302,56 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p3MinusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Wk-Zg-bp1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQN-7D-tGL">
+                                                <rect key="frame" x="138" y="0.0" width="35.5" height="58.5"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="+">
+                                                            <attributes>
+                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="30" name="PartyLetPlain"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p3PlusVal:" destination="BYZ-38-t0r" eventType="touchDown" id="Bg0-DR-9xV"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ak-aF-ZmC">
+                                                <rect key="frame" x="208.5" y="0.0" width="41" height="58.5"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WeE-jF-h59">
+                                                <rect key="frame" x="284.5" y="0.0" width="32.5" height="58.5"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="-">
+                                                            <attributes>
+                                                                <font key="NSFont" size="30" name="PartyLetPlain"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p3MinusVal:" destination="BYZ-38-t0r" eventType="touchDown" id="9vU-M7-BnL"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVI-zy-viZ">
-                                                <rect key="frame" x="160" y="0.0" width="47.5" height="58.5"/>
+                                                <rect key="frame" x="352" y="0.0" width="47.5" height="58.5"/>
                                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="50"/>
                                                 <color key="textColor" systemColor="systemPinkColor"/>
                                                 <nil key="highlightedColor"/>
@@ -221,9 +361,8 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qqF-FF-sVl" userLabel="p4">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqF-FF-sVl" userLabel="p4">
                                 <rect key="frame" x="0.0" y="340" width="414" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDl-iT-sJ8">
                                         <rect key="frame" x="10" y="-15" width="51" height="25"/>
@@ -240,8 +379,8 @@
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" systemColor="opaqueSeparatorColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" fixedFrame="YES" distribution="fillProportionally" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="N6x-5e-RoY">
-                                        <rect key="frame" x="10" y="4" width="207.5" height="58.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" fixedFrame="YES" distribution="fillProportionally" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="N6x-5e-RoY">
+                                        <rect key="frame" x="10" y="4" width="399.5" height="58.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5H-bi-pjZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="35.5" height="58.5"/>
@@ -258,9 +397,12 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p4AddOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ldX-xb-Jde"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZ1-qm-mfb">
-                                                <rect key="frame" x="81.5" y="0.0" width="32.5" height="58.5"/>
+                                                <rect key="frame" x="70.5" y="0.0" width="32.5" height="58.5"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
@@ -273,9 +415,56 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p4MinusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T1a-mc-he7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yh-H1-2m6">
+                                                <rect key="frame" x="138" y="0.0" width="35.5" height="58.5"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="+">
+                                                            <attributes>
+                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="30" name="PartyLetPlain"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p4PlusVal:" destination="BYZ-38-t0r" eventType="touchDown" id="9fK-3b-dgI"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tJW-Qw-JyS">
+                                                <rect key="frame" x="208.5" y="0.0" width="41" height="58.5"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKb-JZ-W87">
+                                                <rect key="frame" x="284.5" y="0.0" width="32.5" height="58.5"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="-">
+                                                            <attributes>
+                                                                <font key="NSFont" size="30" name="PartyLetPlain"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p4MinusVal:" destination="BYZ-38-t0r" eventType="touchDown" id="lyx-Vw-9pO"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mf0-3Q-4Ql">
-                                                <rect key="frame" x="160" y="0.0" width="47.5" height="58.5"/>
+                                                <rect key="frame" x="352" y="0.0" width="47.5" height="58.5"/>
                                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="50"/>
                                                 <color key="textColor" systemColor="systemPinkColor"/>
                                                 <nil key="highlightedColor"/>
@@ -285,9 +474,8 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bKi-Pq-3O8" userLabel="p5">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKi-Pq-3O8" userLabel="p5">
                                 <rect key="frame" x="0.0" y="415" width="414" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pj-Am-dty">
                                         <rect key="frame" x="10" y="-15" width="49" height="25"/>
@@ -304,8 +492,8 @@
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" systemColor="opaqueSeparatorColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" fixedFrame="YES" distribution="fillProportionally" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="uBk-Y7-FoQ">
-                                        <rect key="frame" x="10" y="4" width="207.5" height="58.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" fixedFrame="YES" distribution="fillProportionally" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="uBk-Y7-FoQ">
+                                        <rect key="frame" x="10" y="4" width="399.5" height="58.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4R-b1-I88">
                                                 <rect key="frame" x="0.0" y="0.0" width="35.5" height="58.5"/>
@@ -322,9 +510,12 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p5AddOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9CK-g8-q6i"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2R-gU-ocu">
-                                                <rect key="frame" x="81.5" y="0.0" width="32.5" height="58.5"/>
+                                                <rect key="frame" x="70.5" y="0.0" width="32.5" height="58.5"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
@@ -337,9 +528,56 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p5MinusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="100-fJ-iVb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIH-eK-lLC">
+                                                <rect key="frame" x="138" y="0.0" width="35.5" height="58.5"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="+">
+                                                            <attributes>
+                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="30" name="PartyLetPlain"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p5PlusVal:" destination="BYZ-38-t0r" eventType="touchDown" id="SiZ-gN-0MW"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u04-5d-vjP">
+                                                <rect key="frame" x="208.5" y="0.0" width="41" height="58.5"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFi-3a-WqT">
+                                                <rect key="frame" x="284.5" y="0.0" width="32.5" height="58.5"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="-">
+                                                            <attributes>
+                                                                <font key="NSFont" size="30" name="PartyLetPlain"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p5MinusVal:" destination="BYZ-38-t0r" eventType="touchDown" id="W6t-PB-b5V"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeX-9t-dwT">
-                                                <rect key="frame" x="160" y="0.0" width="47.5" height="58.5"/>
+                                                <rect key="frame" x="352" y="0.0" width="47.5" height="58.5"/>
                                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="50"/>
                                                 <color key="textColor" systemColor="systemPinkColor"/>
                                                 <nil key="highlightedColor"/>
@@ -349,9 +587,8 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PbX-Ed-uEi" userLabel="p6">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PbX-Ed-uEi" userLabel="p6">
                                 <rect key="frame" x="0.0" y="490" width="414" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j79-Wk-YY1">
                                         <rect key="frame" x="10" y="-15" width="52" height="25"/>
@@ -368,8 +605,8 @@
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" systemColor="opaqueSeparatorColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" fixedFrame="YES" distribution="fillProportionally" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="AhO-YV-Y3X">
-                                        <rect key="frame" x="10" y="4" width="207.5" height="58.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" fixedFrame="YES" distribution="fillProportionally" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="AhO-YV-Y3X">
+                                        <rect key="frame" x="10" y="4" width="399.5" height="58.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ZV-9P-dqf">
                                                 <rect key="frame" x="0.0" y="0.0" width="35.5" height="58.5"/>
@@ -386,9 +623,12 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p6AddOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zeK-vF-zMp"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zc-Ah-9KJ">
-                                                <rect key="frame" x="81.5" y="0.0" width="32.5" height="58.5"/>
+                                                <rect key="frame" x="70.5" y="0.0" width="32.5" height="58.5"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
@@ -401,9 +641,56 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p6MinusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EF9-a6-GEE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKB-gx-WB9">
+                                                <rect key="frame" x="138" y="0.0" width="35.5" height="58.5"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="+">
+                                                            <attributes>
+                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="30" name="PartyLetPlain"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p6PlusVal:" destination="BYZ-38-t0r" eventType="touchDown" id="txy-rc-wmi"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dlh-vt-Z4l">
+                                                <rect key="frame" x="208.5" y="0.0" width="41" height="58.5"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uf7-Cj-cw5">
+                                                <rect key="frame" x="284.5" y="0.0" width="32.5" height="58.5"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="-">
+                                                            <attributes>
+                                                                <font key="NSFont" size="30" name="PartyLetPlain"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p6MinusVal:" destination="BYZ-38-t0r" eventType="touchDown" id="fKQ-1S-gsI"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyz-YQ-JTH">
-                                                <rect key="frame" x="160" y="0.0" width="47.5" height="58.5"/>
+                                                <rect key="frame" x="352" y="0.0" width="47.5" height="58.5"/>
                                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="50"/>
                                                 <color key="textColor" systemColor="systemPinkColor"/>
                                                 <nil key="highlightedColor"/>
@@ -413,9 +700,8 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g4C-iP-EWL" userLabel="p7">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4C-iP-EWL" userLabel="p7">
                                 <rect key="frame" x="0.0" y="565" width="414" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HU7-OY-B0u">
                                         <rect key="frame" x="10" y="-15" width="49" height="25"/>
@@ -432,8 +718,8 @@
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" systemColor="opaqueSeparatorColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" fixedFrame="YES" distribution="fillProportionally" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="KgI-kt-Von">
-                                        <rect key="frame" x="10" y="4" width="207.5" height="58.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" fixedFrame="YES" distribution="fillProportionally" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="KgI-kt-Von">
+                                        <rect key="frame" x="10" y="4" width="399.5" height="58.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Daa-0w-wue">
                                                 <rect key="frame" x="0.0" y="0.0" width="35.5" height="58.5"/>
@@ -450,9 +736,12 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p7AddOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HQ3-OM-lXC"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p91-VT-qMj">
-                                                <rect key="frame" x="81.5" y="0.0" width="32.5" height="58.5"/>
+                                                <rect key="frame" x="70.5" y="0.0" width="32.5" height="58.5"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
@@ -465,9 +754,56 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p7MinusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="apA-wb-EvJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyv-6C-MB2">
+                                                <rect key="frame" x="138" y="0.0" width="35.5" height="58.5"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="+">
+                                                            <attributes>
+                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="30" name="PartyLetPlain"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p7PlusVal:" destination="BYZ-38-t0r" eventType="touchDown" id="0bH-I4-TpV"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wQX-Sd-SgG">
+                                                <rect key="frame" x="208.5" y="0.0" width="41" height="58.5"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHK-p7-kgl">
+                                                <rect key="frame" x="284.5" y="0.0" width="32.5" height="58.5"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="-">
+                                                            <attributes>
+                                                                <font key="NSFont" size="30" name="PartyLetPlain"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p7MinusVal:" destination="BYZ-38-t0r" eventType="touchDown" id="Byu-gQ-kSg"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNG-k0-YSQ">
-                                                <rect key="frame" x="160" y="0.0" width="47.5" height="58.5"/>
+                                                <rect key="frame" x="352" y="0.0" width="47.5" height="58.5"/>
                                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="50"/>
                                                 <color key="textColor" systemColor="systemPinkColor"/>
                                                 <nil key="highlightedColor"/>
@@ -477,9 +813,8 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="39r-cl-mtG" userLabel="p8">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39r-cl-mtG" userLabel="p8">
                                 <rect key="frame" x="0.0" y="640" width="414" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sod-hr-NMg">
                                         <rect key="frame" x="10" y="-15" width="50" height="25"/>
@@ -496,8 +831,8 @@
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" systemColor="opaqueSeparatorColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" fixedFrame="YES" distribution="fillProportionally" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="CES-K8-ulS">
-                                        <rect key="frame" x="10" y="4" width="207.5" height="58.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" fixedFrame="YES" distribution="fillProportionally" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="CES-K8-ulS">
+                                        <rect key="frame" x="10" y="4" width="399.5" height="58.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0KW-xK-IXM">
                                                 <rect key="frame" x="0.0" y="0.0" width="35.5" height="58.5"/>
@@ -514,9 +849,12 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p8AddOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="epV-Hd-oDS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOz-Iw-Y5p">
-                                                <rect key="frame" x="81.5" y="0.0" width="32.5" height="58.5"/>
+                                                <rect key="frame" x="70.5" y="0.0" width="32.5" height="58.5"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
@@ -529,9 +867,56 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p8MinusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="65Q-TW-EYH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPz-hZ-wnt">
+                                                <rect key="frame" x="138" y="0.0" width="35.5" height="58.5"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="+">
+                                                            <attributes>
+                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="30" name="PartyLetPlain"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p8PlusVal:" destination="BYZ-38-t0r" eventType="touchDown" id="iHv-g9-9H8"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QIO-Gy-SRw">
+                                                <rect key="frame" x="208.5" y="0.0" width="41" height="58.5"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKE-fv-LfN">
+                                                <rect key="frame" x="284.5" y="0.0" width="32.5" height="58.5"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="-">
+                                                            <attributes>
+                                                                <font key="NSFont" size="30" name="PartyLetPlain"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="p8MinusVal:" destination="BYZ-38-t0r" eventType="touchDown" id="e2I-Kj-sNu"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVh-Q1-8A2">
-                                                <rect key="frame" x="160" y="0.0" width="47.5" height="58.5"/>
+                                                <rect key="frame" x="352" y="0.0" width="47.5" height="58.5"/>
                                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="50"/>
                                                 <color key="textColor" systemColor="systemPinkColor"/>
                                                 <nil key="highlightedColor"/>
@@ -541,22 +926,8 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GII-Lh-0Zc">
-                                <rect key="frame" x="207" y="797" width="0.0" height="55"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="AkC-Kq-e3f"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="37"/>
-                                <color key="textColor" systemColor="systemRedColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="person.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vZy-Oc-eIr">
-                                <rect key="frame" x="358" y="24" width="21" height="20.5"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98Y-xj-wLw">
-                                <rect key="frame" x="322" y="837" width="88" height="47"/>
+                                <rect key="frame" x="328" y="849" width="86" height="47"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -569,51 +940,207 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="KQO-CI-aoc" kind="popoverPresentation" popoverAnchorView="98Y-xj-wLw" id="UC5-7Q-uT6">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ep-Cl-0ar">
+                                <rect key="frame" x="369.5" y="24" width="44.5" height="31"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="person.badge.plus" catalog="system"/>
+                                <connections>
+                                    <action selector="addPlayer:" destination="BYZ-38-t0r" eventType="touchDown" id="H9j-s3-neK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mie-MU-6sx">
+                                <rect key="frame" x="320" y="24" width="44.5" height="31"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="person.badge.minus" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="removePlayer:" destination="BYZ-38-t0r" eventType="touchDown" id="VOj-dO-J2s"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GII-Lh-0Zc">
+                                <rect key="frame" x="75" y="795" width="305" height="55"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="AkC-Kq-e3f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="37"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <color key="highlightedColor" systemColor="systemRedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xop-yf-Orq">
+                                <rect key="frame" x="8" y="849" width="70" height="47"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Reset">
+                                            <attributes>
+                                                <font key="NSFont" size="28" name="PartyLetPlain"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchDown" id="gxg-g2-rgK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="GII-Lh-0Zc" secondAttribute="trailing" constant="-207" id="8JJ-6M-Yjf"/>
-                            <constraint firstItem="vZy-Oc-eIr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="23" id="CQM-LB-QSt"/>
-                            <constraint firstAttribute="bottom" secondItem="GII-Lh-0Zc" secondAttribute="bottom" constant="44" id="EFU-Mt-SSy"/>
-                            <constraint firstItem="vZy-Oc-eIr" firstAttribute="leading" secondItem="gXv-jX-dH5" secondAttribute="trailing" constant="39" id="Ghr-D8-1Zd"/>
-                            <constraint firstAttribute="trailing" secondItem="vZy-Oc-eIr" secondAttribute="trailing" constant="35" id="IVU-vR-Coy"/>
+                            <constraint firstItem="G8i-eG-bgd" firstAttribute="width" secondItem="JS3-DA-P3t" secondAttribute="width" id="06f-49-vnv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GII-Lh-0Zc" secondAttribute="trailing" constant="34" id="1Xq-aD-gr6"/>
+                            <constraint firstItem="39r-cl-mtG" firstAttribute="width" secondItem="JS3-DA-P3t" secondAttribute="width" id="2HC-O6-Pnk"/>
+                            <constraint firstItem="c7h-ji-Nrz" firstAttribute="top" secondItem="G8i-eG-bgd" secondAttribute="bottom" constant="8" symbolic="YES" id="3CP-DA-bGr"/>
+                            <constraint firstItem="bKi-Pq-3O8" firstAttribute="height" secondItem="JS3-DA-P3t" secondAttribute="height" id="40g-zB-N8i"/>
+                            <constraint firstItem="3ep-Cl-0ar" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="24" id="4PR-hS-0dI"/>
+                            <constraint firstItem="gXv-jX-dH5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133.5" id="4qM-Vl-AZh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gXv-jX-dH5" secondAttribute="trailing" constant="93" id="6bF-af-XcC"/>
+                            <constraint firstItem="3ep-Cl-0ar" firstAttribute="leading" secondItem="mie-MU-6sx" secondAttribute="trailing" constant="5" id="7YJ-Ol-2Pi"/>
+                            <constraint firstAttribute="bottom" secondItem="xop-yf-Orq" secondAttribute="bottom" id="8vW-14-4hD"/>
+                            <constraint firstItem="G8i-eG-bgd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BMe-gs-1Np"/>
+                            <constraint firstItem="98Y-xj-wLw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Bgv-Bz-nDy"/>
+                            <constraint firstItem="PbX-Ed-uEi" firstAttribute="height" secondItem="JS3-DA-P3t" secondAttribute="height" id="Bmo-xI-kDM"/>
+                            <constraint firstItem="98Y-xj-wLw" firstAttribute="top" secondItem="39r-cl-mtG" secondAttribute="bottom" constant="142" id="Bzh-Qs-EMO"/>
+                            <constraint firstItem="c7h-ji-Nrz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CGj-0j-w9e"/>
+                            <constraint firstItem="qqF-FF-sVl" firstAttribute="width" secondItem="JS3-DA-P3t" secondAttribute="width" id="DXK-8G-lKJ"/>
+                            <constraint firstItem="JS3-DA-P3t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dqn-yZ-ysO"/>
+                            <constraint firstItem="c7h-ji-Nrz" firstAttribute="width" secondItem="JS3-DA-P3t" secondAttribute="width" id="Fa3-gm-IPD"/>
+                            <constraint firstItem="G8i-eG-bgd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G3R-Bg-YJK"/>
+                            <constraint firstItem="qqF-FF-sVl" firstAttribute="height" secondItem="JS3-DA-P3t" secondAttribute="height" id="GVC-vb-uAj"/>
+                            <constraint firstItem="g4C-iP-EWL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GY1-UM-xyl"/>
+                            <constraint firstItem="xop-yf-Orq" firstAttribute="top" secondItem="39r-cl-mtG" secondAttribute="bottom" constant="142" id="HxS-0I-0E0"/>
+                            <constraint firstItem="bKi-Pq-3O8" firstAttribute="width" secondItem="JS3-DA-P3t" secondAttribute="width" id="LdF-S9-2GW"/>
+                            <constraint firstItem="qqF-FF-sVl" firstAttribute="top" secondItem="c7h-ji-Nrz" secondAttribute="bottom" constant="8" symbolic="YES" id="MyR-rM-yJY"/>
+                            <constraint firstItem="98Y-xj-wLw" firstAttribute="leading" secondItem="xop-yf-Orq" secondAttribute="trailing" constant="250" id="N40-RH-4jm"/>
+                            <constraint firstItem="JS3-DA-P3t" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="N6M-jo-Jb0"/>
+                            <constraint firstItem="39r-cl-mtG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NFP-DY-e91"/>
                             <constraint firstItem="gXv-jX-dH5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="O9V-yb-VmT"/>
-                            <constraint firstItem="98Y-xj-wLw" firstAttribute="leading" secondItem="GII-Lh-0Zc" secondAttribute="trailing" constant="115" id="d7j-9p-Zw7"/>
-                            <constraint firstItem="GII-Lh-0Zc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="797" id="fC2-WX-7rn"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="98Y-xj-wLw" secondAttribute="trailing" constant="4" id="h2y-sj-aaQ"/>
-                            <constraint firstItem="vZy-Oc-eIr" firstAttribute="leading" secondItem="gXv-jX-dH5" secondAttribute="trailing" constant="39" id="hHa-yE-QFX"/>
+                            <constraint firstItem="mie-MU-6sx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="320" id="QzT-3m-Lgf"/>
+                            <constraint firstItem="PbX-Ed-uEi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RKS-GQ-dwK"/>
+                            <constraint firstItem="PbX-Ed-uEi" firstAttribute="top" secondItem="bKi-Pq-3O8" secondAttribute="bottom" constant="8" symbolic="YES" id="TAN-d1-W7i"/>
+                            <constraint firstItem="c7h-ji-Nrz" firstAttribute="height" secondItem="JS3-DA-P3t" secondAttribute="height" id="Voh-NZ-oKf"/>
+                            <constraint firstItem="GII-Lh-0Zc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="XhX-8J-XG3"/>
+                            <constraint firstItem="bKi-Pq-3O8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YNd-QH-B9o"/>
+                            <constraint firstItem="39r-cl-mtG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bxr-Mn-r0q"/>
+                            <constraint firstItem="G8i-eG-bgd" firstAttribute="height" secondItem="JS3-DA-P3t" secondAttribute="height" id="dA7-dq-Fw5"/>
+                            <constraint firstItem="g4C-iP-EWL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dpy-gU-tgO"/>
+                            <constraint firstItem="PbX-Ed-uEi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eYM-bB-7Jl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GII-Lh-0Zc" secondAttribute="bottom" constant="12" id="egB-9Q-xbu"/>
+                            <constraint firstItem="39r-cl-mtG" firstAttribute="height" secondItem="JS3-DA-P3t" secondAttribute="height" id="fl6-A3-63e"/>
+                            <constraint firstItem="G8i-eG-bgd" firstAttribute="top" secondItem="JS3-DA-P3t" secondAttribute="bottom" constant="8" symbolic="YES" id="hpK-az-8Xg"/>
+                            <constraint firstItem="xop-yf-Orq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i9g-Wb-eYw"/>
+                            <constraint firstItem="bKi-Pq-3O8" firstAttribute="top" secondItem="qqF-FF-sVl" secondAttribute="bottom" constant="8" symbolic="YES" id="kHG-9W-AUO"/>
+                            <constraint firstItem="bKi-Pq-3O8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kPQ-Uv-REw"/>
+                            <constraint firstItem="g4C-iP-EWL" firstAttribute="height" secondItem="JS3-DA-P3t" secondAttribute="height" id="mY9-eh-Ynf"/>
+                            <constraint firstAttribute="bottom" secondItem="98Y-xj-wLw" secondAttribute="bottom" id="nNm-kP-gct"/>
+                            <constraint firstItem="g4C-iP-EWL" firstAttribute="width" secondItem="JS3-DA-P3t" secondAttribute="width" id="nyo-a9-YLc"/>
+                            <constraint firstItem="c7h-ji-Nrz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="q2p-SS-xxw"/>
+                            <constraint firstItem="GII-Lh-0Zc" firstAttribute="top" secondItem="39r-cl-mtG" secondAttribute="bottom" constant="88" id="t5v-H4-qnJ"/>
+                            <constraint firstItem="qqF-FF-sVl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tPM-wi-9xe"/>
+                            <constraint firstItem="39r-cl-mtG" firstAttribute="top" secondItem="g4C-iP-EWL" secondAttribute="bottom" constant="8" symbolic="YES" id="uVO-LV-F2r"/>
+                            <constraint firstItem="g4C-iP-EWL" firstAttribute="top" secondItem="PbX-Ed-uEi" secondAttribute="bottom" constant="8" symbolic="YES" id="wTr-UZ-7WJ"/>
+                            <constraint firstItem="JS3-DA-P3t" firstAttribute="top" secondItem="3ep-Cl-0ar" secondAttribute="bottom" constant="60" id="wcD-sY-WAR"/>
+                            <constraint firstAttribute="trailing" secondItem="3ep-Cl-0ar" secondAttribute="trailing" id="yF1-D5-yir"/>
+                            <constraint firstItem="mie-MU-6sx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="24" id="z5f-Uj-cfQ"/>
+                            <constraint firstItem="PbX-Ed-uEi" firstAttribute="width" secondItem="JS3-DA-P3t" secondAttribute="width" id="zRc-in-bGp"/>
+                            <constraint firstItem="qqF-FF-sVl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zyA-Bd-uJ2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="uFp-K8-har"/>
                     <connections>
-                        <outlet property="addBttn" destination="vZy-Oc-eIr" id="hip-4U-A2W"/>
+                        <outlet property="addBttn" destination="3ep-Cl-0ar" id="bc1-mi-zk6"/>
                         <outlet property="historyBttn" destination="98Y-xj-wLw" id="h2f-gM-Yu1"/>
                         <outlet property="lostLabel" destination="GII-Lh-0Zc" id="9uh-b9-5fG"/>
                         <outlet property="p1" destination="JS3-DA-P3t" id="jFw-Re-RCN"/>
+                        <outlet property="p1Field" destination="H7b-zP-cd9" id="wbJ-18-Nga"/>
                         <outlet property="p1L" destination="XP6-BZ-lEt" id="PxT-NW-WYO"/>
                         <outlet property="p2" destination="G8i-eG-bgd" id="uxM-1U-MMb"/>
+                        <outlet property="p2Field" destination="glq-Sg-bhk" id="Nc3-L5-JCt"/>
                         <outlet property="p2L" destination="YwE-V8-nqi" id="iev-md-bfr"/>
                         <outlet property="p3" destination="c7h-ji-Nrz" id="8Ly-2K-ukg"/>
+                        <outlet property="p3Field" destination="6ak-aF-ZmC" id="orP-Di-4fR"/>
                         <outlet property="p3L" destination="gVI-zy-viZ" id="CUH-KX-hlr"/>
                         <outlet property="p4" destination="qqF-FF-sVl" id="9KJ-cZ-1IO"/>
+                        <outlet property="p4Field" destination="tJW-Qw-JyS" id="54c-OW-AR5"/>
                         <outlet property="p4L" destination="mf0-3Q-4Ql" id="1lh-jl-CjE"/>
                         <outlet property="p5" destination="bKi-Pq-3O8" id="AVX-fm-ISx"/>
+                        <outlet property="p5Field" destination="u04-5d-vjP" id="tfY-Ai-xy9"/>
                         <outlet property="p5L" destination="xeX-9t-dwT" id="qz4-VB-Ddg"/>
                         <outlet property="p6" destination="PbX-Ed-uEi" id="4Jm-hZ-7Du"/>
+                        <outlet property="p6Field" destination="dlh-vt-Z4l" id="dUh-ei-D3b"/>
                         <outlet property="p6L" destination="jyz-YQ-JTH" id="7uT-29-gx8"/>
                         <outlet property="p7" destination="g4C-iP-EWL" id="hye-y1-Cib"/>
+                        <outlet property="p7Field" destination="wQX-Sd-SgG" id="i8T-7l-uBa"/>
                         <outlet property="p7L" destination="UNG-k0-YSQ" id="jze-GP-vfH"/>
                         <outlet property="p8" destination="39r-cl-mtG" id="yZG-Xf-S1L"/>
+                        <outlet property="p8Field" destination="QIO-Gy-SRw" id="wJH-RP-aQV"/>
                         <outlet property="p8L" destination="BVh-Q1-8A2" id="xK2-aG-gfG"/>
+                        <outlet property="removeBttn" destination="mie-MU-6sx" id="vbs-72-nTN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="17.39130434782609" y="97.098214285714278"/>
         </scene>
+        <!--History View Controller-->
+        <scene sceneID="xp4-qd-w1b">
+            <objects>
+                <viewController id="KQO-CI-aoc" customClass="HistoryViewController" customModule="lifeCounter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pd9-R0-WHb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" fixedFrame="YES" text="History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="p0l-Nu-2fS">
+                                <rect key="frame" x="147.70071803348401" y="44" width="118" height="62.000000000000057"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="53"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1n-gA-F5F">
+                                <rect key="frame" x="0.0" y="0.0" width="68" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.backward" catalog="system"/>
+                                <connections>
+                                    <action selector="returnPage:" destination="KQO-CI-aoc" eventType="touchUpInside" id="5qa-9a-5L0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHa-7b-nbk">
+                                <rect key="frame" x="20" y="114" width="374" height="694"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="R0b-nb-ces"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="historyLabel" destination="PHa-7b-nbk" id="WJi-hB-eEZ"/>
+                        <outlet property="returnBttn" destination="H1n-gA-F5F" id="sQL-Dk-zE6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qZZ-kC-HUp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="747.82608695652175" y="96.428571428571431"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.turn.up.backward" catalog="system" width="128" height="106"/>
+        <image name="person.badge.minus" catalog="system" width="128" height="124"/>
         <image name="person.badge.plus" catalog="system" width="128" height="124"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

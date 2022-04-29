@@ -16,6 +16,7 @@
 		321A5CF528123FE300285121 /* lifeCounterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321A5CF428123FE300285121 /* lifeCounterUITestsLaunchTests.swift */; };
 		321A5D032812413600285121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321A5D012812413600285121 /* LaunchScreen.storyboard */; };
 		321A5D062812413B00285121 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321A5D042812413B00285121 /* Main.storyboard */; };
+		32A867F5281C9A7B00AF2903 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A867F4281C9A7B00AF2903 /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		321A5CF428123FE300285121 /* lifeCounterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lifeCounterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		321A5D022812413600285121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		321A5D052812413B00285121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		32A867F4281C9A7B00AF2903 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				321A5CD528123FE200285121 /* ViewController.swift */,
 				321A5D012812413600285121 /* LaunchScreen.storyboard */,
 				321A5D042812413B00285121 /* Main.storyboard */,
+				32A867F4281C9A7B00AF2903 /* HistoryViewController.swift */,
 				321A5CDA28123FE300285121 /* Assets.xcassets */,
 				321A5CDF28123FE300285121 /* Info.plist */,
 			);
@@ -261,6 +264,7 @@
 				321A5CD628123FE200285121 /* ViewController.swift in Sources */,
 				321A5CD228123FE200285121 /* AppDelegate.swift in Sources */,
 				321A5CD428123FE200285121 /* SceneDelegate.swift in Sources */,
+				32A867F5281C9A7B00AF2903 /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
